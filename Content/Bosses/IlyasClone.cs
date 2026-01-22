@@ -208,7 +208,7 @@ lastPhase = phase;
             if (attackTimer % 60 == 0)
             {
                 Vector2 dir = (player.Center - NPC.Center).SafeNormalize(Vector2.Zero);
-                NPC.velocity = dir * 20f;
+                NPC.velocity = dir * 10f;
                 SoundEngine.PlaySound(SoundID.Roar, NPC.Center);
             }
 
@@ -282,7 +282,7 @@ lastPhase = phase;
             if (attackTimer % 50 == 0)
             {
                 Vector2 dir = (player.Center - NPC.Center).SafeNormalize(Vector2.Zero);
-                NPC.velocity = dir * 22f;
+                NPC.velocity = dir * 10f;
                 SoundEngine.PlaySound(SoundID.Roar, NPC.Center);
             }
 

@@ -20,9 +20,25 @@ namespace MayhemDeviance.Content.Items.Consumables
             Item.rare = ItemRarityID.Red;
         }
 
-        public override bool CanUseItem(Player player) {
-            return !MayhemDifficulty.MayhemMode;
+        
+        public override bool CanUseItem(Player player)
+{
+    if (!Main.GameModeInfo.IsExpertMode)
+    {
+        if (Main.myPlayer == player.whoAmI)
+        {
+            Main.NewText("Difficulty is too low!", 255, 80, 80);
         }
+        return false;
+    }
+
+    if (MayhemDifficulty.MayhemMode == true)
+            {
+                return false;
+            }
+
+    return true;
+}
 
         public override bool? UseItem(Player player) {
             SoundEngine.PlaySound(SoundID.Roar, player.position);

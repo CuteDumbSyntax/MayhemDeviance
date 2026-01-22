@@ -19,6 +19,7 @@ namespace MayhemDeviance.Content.Projectiles
 
     public override void AI()
 {
+	Projectile.rotation += 0.02f;
     if (!NPC.AnyNPCs(ModContent.NPCType<Argun>()))
 {
     Projectile.Kill();

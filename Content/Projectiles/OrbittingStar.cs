@@ -22,6 +22,7 @@ namespace MayhemDeviance.Content.Projectiles
 
     public override void AI()
 {
+    Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;
     int bossID = (int)Projectile.ai[0];
     if (bossID < 0 || bossID >= Main.maxNPCs)
     {

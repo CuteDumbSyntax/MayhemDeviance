@@ -9,10 +9,6 @@ namespace MayhemDeviance.Content.Items
 	public class EssenceOfLove : ModItem
 	{
 		public override void SetStaticDefaults() {
-			// Registers a vertical animation with 4 frames and each one will last 5 ticks (1/12 second)
-			Main.RegisterItemAnimation(Type, new DrawAnimationVertical(5, 22));
-			ItemID.Sets.AnimatesAsSoul[Type] = true; // Makes the item have an animation while in world (not held.). Use in combination with RegisterItemAnimation
-
 			ItemID.Sets.ItemIconPulse[Type] = true; // The item pulses while in the player's inventory
 			ItemID.Sets.ItemNoGravity[Type] = true; // Makes the item have no gravity
 

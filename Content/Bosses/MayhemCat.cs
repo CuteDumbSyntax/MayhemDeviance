@@ -36,7 +36,7 @@ namespace MayhemDeviance.Content.Bosses
             NPC.boss = true;
             NPC.noGravity = true;
 			NPC.noTileCollide = true;
-			NPC.lifeMax = 1000;
+			NPC.lifeMax = 1300;
 			NPC.HitSound = SoundID.Meowmere;
 			NPC.DeathSound = SoundID.NPCDeath2;
 			NPC.value = 60f;

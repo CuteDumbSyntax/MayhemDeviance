@@ -112,6 +112,11 @@ Items: {
 		Tooltip: ""
 		DisplayName: Precious Sword
 	}
+
+	IceFairyStaff: {
+		DisplayName: Ice Fairy Staff
+		Tooltip: ""
+	}
 }
 
 NPCs: {
@@ -157,12 +162,19 @@ Projectiles: {
 	OrbittingStar2.DisplayName: Orbitting Star
 	OrbittingLove.DisplayName: Love Crystal
 	FallingLight.DisplayName: Falling Light
+	IceFairyMinion.DisplayName: Ice Fairy Minion
+	SharpIce.DisplayName: Sharp Ice
 }
 
 Buffs: {
 	OrbittingLoveBuff: {
 		Description: Two hearts protect you!
 		DisplayName: Love Crystal
+	}
+
+	IceFairyStaffBuff: {
+		Description: The Strongest Ice Fairy protects you!
+		DisplayName: Ice Fairy
 	}
 }
 
