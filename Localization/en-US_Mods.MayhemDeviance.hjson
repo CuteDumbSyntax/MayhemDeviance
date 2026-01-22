@@ -1,0 +1,193 @@
+# This file will automatically update with entries for new content after a build and reload.
+
+Items: {
+	Ilyasrage: {
+		DisplayName: Ilyasrage
+		Tooltip:
+			'''
+			Uncursed weapon of Ilya
+			Ilya's curse...
+			'''
+	}
+
+	BadApple: {
+		DisplayName: Bad Apple
+		Tooltip: ""
+	}
+
+	ArgunRelic: {
+		DisplayName: Argun Relic
+		Tooltip: You've killed his servant. Impressive.
+	}
+
+	BadAppleMusicBox: {
+		Tooltip: ""
+		DisplayName: Bad Apple Music Box
+	}
+
+	ArgunBag: {
+		Tooltip: ""
+		DisplayName: Argun Bag
+	}
+
+	CursedTear: {
+		Tooltip: ""
+		DisplayName: Cursed Tear
+	}
+
+	MayhemCoin: {
+		DisplayName: Mayhem Coin
+		Tooltip:
+			'''
+			[c/ff0000:Enables Mayhem Mode...]
+			3x more enemy health.
+			2x more enemy damage.
+			Some bosses are reworked...
+			'''
+	}
+
+	MagicalSword: {
+		DisplayName: Magical Sword
+		Tooltip: ""
+	}
+
+	NinjasFury: {
+		DisplayName: Ninjas Fury
+		Tooltip:
+			'''
+			Allows the player to dash
+			Increases any damage by 5%
+			'''
+	}
+
+	TeethOfCthulhu: {
+		DisplayName: Teeth Of Cthulhu
+		Tooltip:
+			'''
+			Shoots with teeth
+			[c/ff5252:Mayhem Mode]
+			'''
+	}
+
+	EssenceOfLove: {
+		Tooltip: ""
+		DisplayName: Essence Of Love
+	}
+
+	PossesedHeart: {
+		Tooltip: ""
+		DisplayName: Possesed Heart
+	}
+
+	MayhemCatRelic: {
+		Tooltip: Her love hurts!
+		DisplayName: Mayhem Cat Relic
+	}
+
+	LoveCrystal: {
+		Tooltip:
+			'''
+			Summons 2 hearts around you, that deals damage to enemy.
+			[c/ff5252:Mayhem Mode]
+			'''
+		DisplayName: Love Crystal
+	}
+
+	NinjaWings: {
+		DisplayName: Ninja Wings
+		Tooltip: ""
+	}
+
+	NinjasWings: {
+		Tooltip: ""
+		DisplayName: Ninjas Wings
+	}
+
+	ArenaFloor: {
+		Tooltip: ""
+		DisplayName: Arena Floor
+	}
+
+	PreciousSword: {
+		Tooltip: ""
+		DisplayName: Precious Sword
+	}
+}
+
+NPCs: {
+	Argun.DisplayName: Argun
+
+	Nazar: {
+		DisplayName: Nazar
+
+		TownNPCMood: {
+			Princess_LovesNPC: I like {NPCName}.
+			LikeNPC_Princess: I like {NPCName}.
+			HateNPC: I HATE {NPCName}! they're weird!
+			FarFromHome: I am too far from home.
+			NoHome: I don't like being homeless, ya know?
+			Content: I am content.
+			DislikeNPC: I dislike {NPCName}.
+			LikeNPC: I like {NPCName}.
+			LoveNPC: I really like {NPCName}.
+			DislikeBiome: I HATE {BiomeName}! So cold!.
+			LoveBiome: I love {BiomeName}!
+			HateCrowded: I hate how crowded I am.
+			DislikeCrowded: There's too much people around me, and they're giving me strange looks...
+			LoveSpace: I love having so much space.
+		}
+
+		DeathMessage: Nazar Disappeared... Will come back soon!
+	}
+
+	MayhemCat.DisplayName: Mayhem Cat
+	IlyasClone.DisplayName: Ilyas Clone
+}
+
+Projectiles: {
+	RockProjectile.DisplayName: Rock
+	SharpRockProjectile.DisplayName: Sharp Rock
+	MagicalSwordProjectile.DisplayName: Magical Sword
+	RockProjectile2.DisplayName: Rock
+	TeethProj.DisplayName: Teeth
+	FakeHeart.DisplayName: Fake Heart
+	AngryHeart.DisplayName: Angry Heart
+	FlyingHeart.DisplayName: Flying Heart
+	OrbittingStar.DisplayName: Orbitting Star
+	OrbittingStar2.DisplayName: Orbitting Star
+	OrbittingLove.DisplayName: Love Crystal
+	FallingLight.DisplayName: Falling Light
+}
+
+Buffs: {
+	OrbittingLoveBuff: {
+		Description: Two hearts protect you!
+		DisplayName: Love Crystal
+	}
+}
+
+Configs: {
+	aModConfig: {
+		DisplayName: a Mod Config
+
+		Headers: {
+			Items: Items Header
+			Other: Other Header
+		}
+
+		WingsToggle: {
+			Label: Wings Toggle
+			Tooltip: ""
+		}
+
+		WeaponWithGrowingDamageToggle: {
+			Label: Weapon With Growing Damage Toggle
+			Tooltip: ""
+		}
+
+		WingSlotLoadoutSupportToggle: {
+			Label: Wing Slot Loadout Support Toggle
+			Tooltip: ""
+		}
+	}
+}

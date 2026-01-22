@@ -1,0 +1,3 @@
+displayName = Mayhem Deviance
+author = MayhemSinner
+version = 0.2
