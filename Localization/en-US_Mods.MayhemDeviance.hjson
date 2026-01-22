@@ -117,6 +117,20 @@ Items: {
 		DisplayName: Ice Fairy Staff
 		Tooltip: ""
 	}
+
+	SuspiciousLookingEyes: {
+		DisplayName: Suspicious Looking Eyes
+		Tooltip: 
+		'''
+		Not consumable summon item
+		Summons Eye Of Cthulhu
+		'''
+	}
+
+	BookOfLove: {
+		DisplayName: Book Of Love
+		Tooltip: ""
+	}
 }
 
 NPCs: {

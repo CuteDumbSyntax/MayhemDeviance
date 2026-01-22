@@ -3,12 +3,12 @@ using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
 using MayhemDeviance.Content.Projectiles;
-namespace Grace.Content.Items.Weapons
+namespace MayhemDeviance.Content.Items.Weapons
 {
 	// ExampleStaff is a typical staff. Staffs and other shooting weapons are very similar, this example serves mainly to show what makes staffs unique from other items.
 	// Staff sprites, by convention, are angled to point up and to the right. "Item.staff[Type] = true;" is essential for correctly drawing staffs.
 	// Staffs use mana and shoot a specific projectile instead of using ammo. Item.DefaultToStaff takes care of that.
-	public class OldTestament : ModItem
+	public class BookOfLove : ModItem
 	{
 		public override void SetStaticDefaults() {
 			Item.staff[Type] = true; // This makes the useStyle animate as a staff instead of as a gun.
@@ -24,7 +24,7 @@ namespace Grace.Content.Items.Weapons
 			Item.UseSound = SoundID.Item20;
 
 			// Set damage and knockBack
-			Item.SetWeaponValues(500000, 5);
+			Item.SetWeaponValues(50, 5);
 
 			// Set rarity and value
 			Item.SetShopValues(ItemRarityColor.Green2, 10000);
