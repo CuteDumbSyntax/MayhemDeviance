@@ -40,9 +40,12 @@ Items: {
 		Tooltip:
 			'''
 			[c/ff0000:Enables Mayhem Mode...]
-			3x more enemy health.
-			2x more enemy damage.
-			Some bosses are reworked...
+			This mode:
+			Increases enemy health and damage.
+			[c/00fdff:Reworks some bosses with new, unique items, and attacks.]
+			Enemies are more fun to deal with!
+			Gives a [c/b600ff:starter bag] for quicker start.
+			[c/28ff00:Once enabled, there's no way back. Think twice, before enabling] [c/ff0000:Mayhem Mode!]
 			'''
 	}
 
@@ -115,20 +118,30 @@ Items: {
 
 	IceFairyStaff: {
 		DisplayName: Ice Fairy Staff
-		Tooltip: ""
+		Tooltip: Summons the greatest Ice fairy!
 	}
 
 	SuspiciousLookingEyes: {
 		DisplayName: Suspicious Looking Eyes
-		Tooltip: 
-		'''
-		Not consumable summon item
-		Summons Eye Of Cthulhu
-		'''
+		Tooltip:
+			'''
+			Not consumable summon item
+			Summons Eye Of Cthulhu
+			'''
 	}
 
 	BookOfLove: {
 		DisplayName: Book Of Love
+		Tooltip: ""
+	}
+
+	MayhemCatBag: {
+		Tooltip: ""
+		DisplayName: Mayhem Cat Bag
+	}
+
+	ShatteredLove: {
+		DisplayName: Shattered Love
 		Tooltip: ""
 	}
 }
@@ -161,6 +174,7 @@ NPCs: {
 
 	MayhemCat.DisplayName: Mayhem Cat
 	IlyasClone.DisplayName: Ilyas Clone
+	TestBoss.DisplayName: Test Boss
 }
 
 Projectiles: {
@@ -178,6 +192,11 @@ Projectiles: {
 	FallingLight.DisplayName: Falling Light
 	IceFairyMinion.DisplayName: Ice Fairy Minion
 	SharpIce.DisplayName: Sharp Ice
+	TestDeathRay.DisplayName: Test Death Ray
+	SpinningDeathRay.DisplayName: Spinning Death Ray
+	AngryLove.DisplayName: Angry Love
+	ShatteredLoveSwing.DisplayName: Shattered Love Swing
+	ShatteredLoveSw.DisplayName: Shattered Love Sw
 }
 
 Buffs: {

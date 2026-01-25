@@ -1,4 +1,5 @@
 using MayhemDeviance.Common.Systems;
+using MayhemDeviance.Content.Items.Consumables;
 using MayhemDeviance.Content.Projectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -9,6 +10,7 @@ using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.GameContent;
 using Terraria.GameContent.Bestiary;
+using Terraria.GameContent.ItemDropRules;
 using Terraria.GameContent.UI;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -46,6 +48,14 @@ namespace MayhemDeviance.Content.Bosses
 			if (!Main.dedServ) {
 				Music = MusicLoader.GetMusicSlot(Mod, "Assets/Music/MayhemCat");
 				}
+
+		}
+
+         public override void ModifyNPCLoot(NPCLoot npcLoot) {
+						LeadingConditionRule notExpertRule = new LeadingConditionRule(new Conditions.NotExpert());
+			npcLoot.Add(notExpertRule);
+			npcLoot.Add(ItemDropRule.BossBag(ModContent.ItemType<MayhemCatBag>()));
+			npcLoot.Add(ItemDropRule.MasterModeCommonDrop(ModContent.ItemType<Items.Placeable.Furniture.MayhemCatRelic>()));
 
 		}
 

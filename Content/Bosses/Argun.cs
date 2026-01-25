@@ -46,7 +46,7 @@ namespace MayhemDeviance.Content.Bosses
 			NPC.lifeMax = 2000;
 			NPC.HitSound = SoundID.NPCHit1;
 			NPC.DeathSound = SoundID.NPCDeath2;
-			NPC.value = 100f;
+			NPC.value = 1000f;
 			NPC.knockBackResist = 0.5f;
 			NPC.aiStyle = -1;
 

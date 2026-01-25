@@ -16,6 +16,8 @@ namespace MayhemDeviance.Content.Bosses
     public class IlyasClone : ModNPC
     {
          private enum BossPhase { Phase1, Phase2 }
+         private int deathRayIndex = -1;
+
         private enum BossAttack
         {
             None,
@@ -337,39 +339,60 @@ lastPhase = phase;
         }
 
         private void CircleTrap(Player player)
+{
+    NPC.velocity = Vector2.Zero;
+
+    // Spawn orbiting projectiles (unchanged)
+    if (attackTimer == 1)
+        SpawnOrbitingProjectiles(
+            ModContent.ProjectileType<OrbittingStar2>(),
+            120,
+            700f
+        );
+
+    // ===== SPAWN DEATH RAY ONCE =====
+    if (attackTimer == 30)
+    {
+        if (Main.netMode != NetmodeID.MultiplayerClient)
         {
-            NPC.velocity = Vector2.Zero;
+            Vector2 startDir = Vector2.UnitX; // initial direction
 
-            if (attackTimer == 1)
-                SpawnOrbitingProjectiles(ModContent.ProjectileType<OrbittingStar2>(), 120, 700f);                 // Orbitting Projectile 2
-            
-        
-            if (attackTimer % 6 == 0)
-            {
-                float rot = attackTimer * 0.15f;
-                Vector2 dir = new Vector2(1, 0).RotatedBy(rot);
-
-                int p = Projectile.NewProjectile(
-                    NPC.GetSource_FromAI(),
-                    NPC.Center,
-                    dir * 12f,
-                    ModContent.ProjectileType<FlyingHeart>(),                 //  Projectile 5
-                    26,
-                    0f,
-                    Main.myPlayer);
-
-                spawnedProjectiles.Add(p);
-                Main.projectile[p].timeLeft = 240;
-                SoundEngine.PlaySound(SoundID.Item20, NPC.Center);
-
-            }
-    
-            if (Vector2.Distance(player.Center, NPC.Center) > 700f)
-                player.Hurt(PlayerDeathReason.ByNPC(NPC.whoAmI), 40, 0);
-
-            if (attackTimer > 360)
-                EndAttack();
+            deathRayIndex = Projectile.NewProjectile(
+                NPC.GetSource_FromAI(),
+                NPC.Center,
+                startDir,
+                ModContent.ProjectileType<SpinningDeathRay>(),
+                70,
+                0f,
+                Main.myPlayer,
+                NPC.whoAmI // ai[0] = boss index
+            );
         }
+
+        SoundEngine.PlaySound(SoundID.Zombie104, NPC.Center);
+    }
+
+    // ===== ROTATE DEATH RAY =====
+    if (deathRayIndex >= 0 && Main.projectile[deathRayIndex].active)
+    {
+        Projectile ray = Main.projectile[deathRayIndex];
+
+        float spinSpeed = 0.02f; // radians per tick
+        ray.ai[1] += spinSpeed;
+
+        Vector2 dir = Vector2.UnitX.RotatedBy(ray.ai[1]);
+        ray.velocity = dir;
+    }
+
+    // ===== PLAYER TOO FAR PUNISHMENT (unchanged) =====
+    if (Vector2.Distance(player.Center, NPC.Center) > 700f)
+        player.Hurt(PlayerDeathReason.ByNPC(NPC.whoAmI), 40, 0);
+
+    // ===== END ATTACK =====
+    if (attackTimer > 360)
+        EndAttack();
+}
+
 
         private void SimpleDash(Player player)
         {
@@ -430,6 +453,17 @@ lastPhase = phase;
 
         private void EndAttack()
         {
+             if (deathRayIndex >= 0)
+    {
+        Projectile ray = Main.projectile[deathRayIndex];
+        if (ray.active && ray.type == ModContent.ProjectileType<SpinningDeathRay>())
+        {
+            ray.Kill();
+        }
+
+        deathRayIndex = -1;
+    }
+  
             attack = BossAttack.None;
             attackTimer = 0;
 

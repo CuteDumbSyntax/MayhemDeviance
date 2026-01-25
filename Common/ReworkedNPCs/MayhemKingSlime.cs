@@ -1,18 +1,4 @@
-using MayhemDeviance.Common.Systems;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Terraria;
-using Terraria.ID;
-using Terraria.ModLoader;
-using Terraria.GameContent.ItemDropRules;
-using MayhemDeviance.Content.Items;
-namespace MayhemDeviance.Common.ReworkedNPCs{
-public class MayhemKingSlime : GlobalNPC
-{
-    public override bool AppliesToEntity(NPC npc, bool lateInstantiation)
-    {
-        return npc.type == NPCID.KingSlime;
-    }
+// 
 
     // public override bool PreDraw(
     //     NPC npc,
@@ -49,15 +35,20 @@ public class MayhemKingSlime : GlobalNPC
     //     return false; //  prevent vanilla drawing
     // }
 
-     public override void ModifyNPCLoot(NPC npc, NPCLoot npcLoot)
-    {
-        npcLoot.Add(
-            ItemDropRule.ByCondition(
-                new MayhemDifCondition(),
-                ModContent.ItemType<Ilyasrage>(),
-                chanceDenominator: 1
-            )
-        );
-    }
-}
-}
+// public override bool AppliesToEntity(NPC npc, bool lateInstantiation) 
+//             => npc.type == NPCID.KingSlime;
+
+
+
+//      public override void ModifyNPCLoot(NPC npc, NPCLoot npcLoot)
+//     {
+//         npcLoot.Add(
+//             ItemDropRule.ByCondition(
+//                 new MayhemDifCondition(),
+//                 ModContent.ItemType<Ilyasrage>(),
+//                 chanceDenominator: 1
+//             )
+//         );
+//     }
+// }
+// }

@@ -53,7 +53,17 @@ namespace MayhemDeviance.Content.Items.Weapons
 		}
 
 		// Please see Content/ExampleRecipes.cs for a detailed explanation of recipe creation.
-		
+		public override void AddRecipes()
+		{
+			Recipe recipe = CreateRecipe();
+			recipe.AddIngredient(ItemID.IceBlock, 15);
+			recipe.AddIngredient(ItemID.SnowBlock, 15);
+			recipe.AddIngredient(ItemID.Snowball, 20);
+			recipe.AddIngredient(ItemID.Wood, 10);
+			recipe.AddIngredient(ItemID.Silk, 5);
+			recipe.AddTile(TileID.Anvils);
+			recipe.Register();
+		}
 	}
 
 }

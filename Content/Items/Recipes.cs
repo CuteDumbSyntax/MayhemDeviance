@@ -36,6 +36,18 @@ namespace MayhemDeviance.Content
         W1.AddIngredient(ItemID.ManaCrystal, 2);
         W1.AddTile(TileID.WorkBenches);
         W1.Register();
+
+        Recipe GP = Recipe.Create(ItemID.LuckyHorseshoe);
+        GP.AddIngredient(ItemID.Cloud, 5);
+        GP.AddIngredient(ItemID.GoldBar, 10);
+        GP.AddTile(TileID.WorkBenches);
+        GP.Register();
+
+        Recipe GP1 = Recipe.Create(ItemID.LuckyHorseshoe);
+        GP1.AddIngredient(ItemID.Cloud, 5);
+        GP1.AddIngredient(ItemID.PlatinumBar, 10);
+        GP1.AddTile(TileID.WorkBenches);
+        GP1.Register();
     }
 
 

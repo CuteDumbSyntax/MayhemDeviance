@@ -26,12 +26,6 @@ namespace MayhemDeviance.Content.Items
 			Item.autoReuse = true;
 		}
 
-		public override void AddRecipes()
-		{
-			Recipe recipe = CreateRecipe();
-			recipe.AddIngredient(ItemID.MoonStone, 10);
-			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.Register();
-		}
+		
 	}
 }
